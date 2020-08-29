@@ -13,9 +13,6 @@
       "type": "string",
       "defaultValue": "[subscription().tenantId]"
     },
-    "adUserId": {
-      "type": "string"
-    },
     "secretName": {
       "type": "string",
       "defaultValue": "vmAdminPassword"
