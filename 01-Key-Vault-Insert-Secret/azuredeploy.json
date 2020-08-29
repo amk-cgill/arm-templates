@@ -28,9 +28,6 @@
       "name": "[concat(parameters('keyVaultName'), '/', parameters('secretName'))]",
       "location": "[parameters('location')]",
       "scale": null,
-      "dependsOn": [
-        "[resourceId('Microsoft.KeyVault/vaults', parameters('keyVaultName'))]"
-      ],
       "properties": {
         "contentType": "securestring",
         "value": "[parameters('secretValue')]",
@@ -48,6 +45,6 @@
     "SecretUri": {
       "type": "string",
       "value": "[reference(resourceId('Microsoft.KeyVault/vaults/secrets', parameters('keyVaultName'), parameters('secretName'))).secretUri]"
-}
+    }
   }
 }
